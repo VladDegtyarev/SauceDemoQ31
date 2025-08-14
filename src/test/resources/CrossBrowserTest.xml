@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" name="Test suite" parallel="classes">
+    <test name="test 1">
+        <classes>
+            <class name="testng.TestNGExampleTest"/>
+            <parameter name="password" value="password"></parameter>
+            <parameter name="email" value="test@mailinator.com"></parameter>
+        </classes>
+    </test> <!-- Test -->
+    <test name="test 2">
+        <classes>
+            <class name="testng.TestNgExampleTest1"/>
+            <class name="testng.TestNGExampleTest3"/>
+        </classes>
+    </test> <!-- Test -->
+</suite>
