@@ -2,9 +2,15 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+
+import java.util.List;
 
 public class ProductsPage extends BasePage {
     private final By TITLE = By.className("title");
+    private final By SHOPPING_CART_BUTTON = By.xpath("//*[@class ='shopping_cart_link']");
+    private final By PRODUCT_SORT_CONTAINER=By.xpath("//select[@class='product_sort_container']");
     private final String ADD_TO_CART_PATTERN="//*[text()='Sauce Labs Backpack']/" +
             "ancestor::div[@class='inventory_item']//button[text()='Add to cart']";
 
@@ -19,7 +25,22 @@ public class ProductsPage extends BasePage {
         driver.get(BASE_URL+"inventory.html");
     }
 
+    public void productElement(String index){
+        WebElement pice = driver.findElement(By.xpath(String.format("//*[@class='inventory_item'][%s]" +
+                "/descendant::*[@class='inventory_item_price']",index)));
+    }
+
     public void addToCart(String product){
         driver.findElement(By.xpath(String.format(ADD_TO_CART_PATTERN,product))).click();
+        }
+    public void openShoppingCart(){
+        driver.findElement(SHOPPING_CART_BUTTON).click();
     }
-}
+    public void openDropDown(int option){
+        WebElement dropDown = driver.findElement(PRODUCT_SORT_CONTAINER);
+        Select select = new Select(dropDown);
+        List<WebElement> options = select.getOptions();
+        options.get(option).click();
+    }
+
+    }

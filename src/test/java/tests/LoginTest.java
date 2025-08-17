@@ -8,16 +8,20 @@ import static org.testng.Assert.assertEquals;
 
 public class LoginTest extends BaseTest {
 
-    @Test
+    @Test(testName = "Проверка входа в магазин с позитивными даннами",
+            description = "Проверка входа в магазин с позитивными даннами",
+            priority = 3)
     public void checkPositiveLogin() {
         loginPage.open();
         loginPage.login("standard_user", "secret_sauce");
         assertEquals(productsPage.getTitle(),
                 "Products",
-                "Лргин не выполнен");
+                "Логин не выполнен");
     }
 
-    @Test
+    @Test(testName = "Проверка входа в магазин с пустым поролем",
+            description ="Проверка входа в магазин с пустым поролем" ,
+            priority = 2)
     public void checkLoginWithEmptyPassword() {
         loginPage.open();
         loginPage.login("standard_user", "");
@@ -26,7 +30,9 @@ public class LoginTest extends BaseTest {
                 "Сообщение об ошибке не соответсвует");
     }
 
-    @Test
+    @Test(testName = "Проверка входа в магазин с пустым именем",
+            description ="Проверка входа в магазин с пустым именем" ,
+            priority = 3)
     public void checkLoginWithEmptyLogin() {
         loginPage.open();
         loginPage.login("", "secret_sauce");
@@ -35,7 +41,9 @@ public class LoginTest extends BaseTest {
                 "Сообщение об ошибке не соответствует");
     }
 
-    @Test
+    @Test(testName = "Проверка входа в магазин с негативными даннами",
+    description ="Проверка входа в магазин с негативными даннами",
+            priority = 4)
     public void checkLoginWithNegativeCred() {
         loginPage.open();
         loginPage.login("test", "test");
@@ -55,7 +63,7 @@ public class LoginTest extends BaseTest {
     public void paramNegativeTest(String user,String password,String expectedErrorMessage){
         loginPage.open();
         loginPage.login(user,password);
-        assertEquals(loginPage.getErrorMessage(),expectedErrorMessage,"Сообщение об ошибки");
+        assertEquals(loginPage.getErrorMessage(),expectedErrorMessage,"Сообщение об ошибки не соответсвует");
 
     }
 }

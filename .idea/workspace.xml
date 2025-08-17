@@ -5,16 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c7ccd0f-d328-48f2-aaee-e726ee3c3849" name="Changes" comment="new">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/CartPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/CheckoutPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/CrossBrowserTest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/CheckoutTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/ProductsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/Retry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/TestListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/SmokeTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/CartPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/CheckoutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/CheckoutPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/ProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ProductsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/CartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/CartTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/login_test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/CrossBrowserTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/CrossBrowserTest.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,8 +61,11 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\java\SauceDemoQ31\src\test\resources" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="tests" />
+    </key>
   </component>
-  <component name="RunManager" selected="TestNG.CartTest">
+  <component name="RunManager" selected="TestNG.D:/java/SauceDemoQ31/src/test/resources/SmokeTest.xml">
     <configuration name="CartTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SauceDemoQ31" />
       <extension name="coverage">
@@ -76,7 +83,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CartTest.deleteProduct" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SauceDemoQ31" />
       <extension name="coverage">
         <pattern>
@@ -85,25 +92,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.LoginTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LoginTest.checkLoginWithEmptyLogin" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="SauceDemoQ31" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.LoginTest" />
-      <option name="METHOD_NAME" value="checkLoginWithEmptyLogin" />
+      <option name="MAIN_CLASS_NAME" value="tests.CartTest" />
+      <option name="METHOD_NAME" value="deleteProduct" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -111,18 +101,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginTest.checkLoginWithEmptyPassword" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="D:/java/SauceDemoQ31/src/test/resources/CrossBrowserTest.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SauceDemoQ31" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.LoginTest" />
-      <option name="METHOD_NAME" value="checkLoginWithEmptyPassword" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/CrossBrowserTest.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="D:/java/SauceDemoQ31/src/test/resources/SmokeTest.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SauceDemoQ31" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/SmokeTest.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
       <properties />
       <listeners />
       <method v="2">
@@ -149,11 +141,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.CartTest" />
-        <item itemvalue="TestNG.LoginTest.checkLoginWithEmptyLogin" />
+        <item itemvalue="TestNG.D:/java/SauceDemoQ31/src/test/resources/SmokeTest.xml" />
+        <item itemvalue="TestNG.D:/java/SauceDemoQ31/src/test/resources/CrossBrowserTest.xml" />
         <item itemvalue="TestNG.LoginTest.paramNegativeTest" />
-        <item itemvalue="TestNG.LoginTest" />
-        <item itemvalue="TestNG.LoginTest.checkLoginWithEmptyPassword" />
+        <item itemvalue="TestNG.CartTest" />
+        <item itemvalue="TestNG.CartTest.deleteProduct" />
       </list>
     </recent_temporary>
   </component>
@@ -190,7 +182,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754559508010</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="new">
+      <option name="closed" value="true" />
+      <created>1755157120148</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1755157120148</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
