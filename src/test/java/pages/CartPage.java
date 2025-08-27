@@ -31,7 +31,7 @@ public class CartPage extends BasePage{
                 .get(index)
                 .getText();
     }
-    public ArrayList<String>getProductsName() {
+    public ArrayList<String> getProductsName() {
         List<WebElement>allProductsElements=driver.findElements(By.cssSelector(".inventory_item_name"));
         ArrayList<String> names = new ArrayList<>();
         for (WebElement product:allProductsElements){

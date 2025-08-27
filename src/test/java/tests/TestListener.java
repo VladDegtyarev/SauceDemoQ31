@@ -6,6 +6,8 @@ import org.testng.ITestResult;
 
 import java.util.concurrent.TimeUnit;
 
+import static tests.AllureUtils.takeScreenshot;
+
 
 public class TestListener implements ITestListener {
 

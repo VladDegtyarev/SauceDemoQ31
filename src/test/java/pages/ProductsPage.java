@@ -1,5 +1,6 @@
 package pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -30,12 +31,16 @@ public class ProductsPage extends BasePage {
                 "/descendant::*[@class='inventory_item_price']",index)));
     }
 
+    @Step("Добавления товара с именм'{product}' в корзину")
     public void addToCart(String product){
-        driver.findElement(By.xpath(String.format(ADD_TO_CART_PATTERN,product))).click();
-        }
+        driver.findElement(By.xpath(String.format(ADD_TO_CART_PATTERN,product))).click();}
+
+    @Step("Нажатие на иконку Корзина")
     public void openShoppingCart(){
         driver.findElement(SHOPPING_CART_BUTTON).click();
     }
+
+    @Step("Откртие Drop Down")
     public void openDropDown(int option){
         WebElement dropDown = driver.findElement(PRODUCT_SORT_CONTAINER);
         Select select = new Select(dropDown);

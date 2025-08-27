@@ -4,21 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c7ccd0f-d328-48f2-aaee-e726ee3c3849" name="Changes" comment="new">
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/CheckoutTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/ProductsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/Retry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/TestListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/SmokeTest.xml" afterDir="false" />
+    <list default="true" id="8c7ccd0f-d328-48f2-aaee-e726ee3c3849" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/AllureUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/AnnotationTransformer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/TestNG.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/allure.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/CartPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/CheckoutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/CheckoutPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/ProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ProductsPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/CartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/CartTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/CheckoutTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/CheckoutTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LoginTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/CrossBrowserTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/CrossBrowserTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/ProductsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/ProductsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/TestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/TestListener.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +37,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="feauture/new_page_test" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -53,14 +55,10 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/java/SauceDemoQ31/src/test/resources&quot;
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\java\SauceDemoQ31\src\test\resources" />
-    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="tests" />
     </key>
@@ -83,7 +81,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CartTest.deleteProduct" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CartTest.checkCart" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SauceDemoQ31" />
       <extension name="coverage">
         <pattern>
@@ -93,7 +91,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.CartTest" />
-      <option name="METHOD_NAME" value="deleteProduct" />
+      <option name="METHOD_NAME" value="checkCart" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -121,18 +119,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginTest.paramNegativeTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="D:/java/SauceDemoQ31/src/test/resources/TestNG.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SauceDemoQ31" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.LoginTest" />
-      <option name="METHOD_NAME" value="paramNegativeTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/TestNG.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
       <properties />
       <listeners />
       <method v="2">
@@ -142,10 +132,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.D:/java/SauceDemoQ31/src/test/resources/SmokeTest.xml" />
-        <item itemvalue="TestNG.D:/java/SauceDemoQ31/src/test/resources/CrossBrowserTest.xml" />
-        <item itemvalue="TestNG.LoginTest.paramNegativeTest" />
+        <item itemvalue="TestNG.CartTest.checkCart" />
         <item itemvalue="TestNG.CartTest" />
-        <item itemvalue="TestNG.CartTest.deleteProduct" />
+        <item itemvalue="TestNG.D:/java/SauceDemoQ31/src/test/resources/TestNG.xml" />
+        <item itemvalue="TestNG.D:/java/SauceDemoQ31/src/test/resources/CrossBrowserTest.xml" />
       </list>
     </recent_temporary>
   </component>
@@ -158,39 +148,6 @@
       <option name="presentableId" value="Default" />
       <updated>1754484813251</updated>
     </task>
-    <task id="LOCAL-00001" summary="new">
-      <option name="closed" value="true" />
-      <created>1754498483286</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1754498483286</updated>
-    </task>
-    <task id="LOCAL-00002" summary="new">
-      <option name="closed" value="true" />
-      <created>1754498490078</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1754498490078</updated>
-    </task>
-    <task id="LOCAL-00003" summary="new">
-      <option name="closed" value="true" />
-      <created>1754559508010</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1754559508010</updated>
-    </task>
-    <task id="LOCAL-00004" summary="new">
-      <option name="closed" value="true" />
-      <created>1755157120148</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1755157120148</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -198,26 +155,10 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="feauture/new_page_test" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="new" />
-    <option name="LAST_COMMIT_MESSAGE" value="new" />
   </component>
 </project>
