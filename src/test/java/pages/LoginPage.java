@@ -25,8 +25,6 @@ public class LoginPage extends BasePage {
     public void open() {
         driver.get(BASE_URL);
         wait.until(ExpectedConditions.visibilityOfElementLocated(LOGIN_BUTTON));
-
-
     }
 
    @Step("Вход в магазин с именем пользователя:'{user}' и поролем: '{password}'")
@@ -34,7 +32,6 @@ public class LoginPage extends BasePage {
         driver.findElement(USERNAME_INPUT).sendKeys(user);
         driver.findElement(PASSWORD_INPUT).sendKeys(password);
         driver.findElement(LOGIN_BUTTON).click();
-
     }
 
     public String getErrorMessage() {
