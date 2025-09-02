@@ -21,7 +21,7 @@ public class ProductsTest extends BaseTest {
         productsPage.openDropDown(2);
         WebElement item = driver.findElement(By.xpath("//*[@class='inventory_item'][1]" +
                 "/descendant::*[@class='inventory_item_price']"));
-        assertEquals(item.getText(), "$7.98",
+        assertEquals(item.getText(), "$7.99",
                 "Цена не соответствует");
     }
 
