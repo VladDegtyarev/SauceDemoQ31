@@ -23,6 +23,8 @@ public class BaseTest {
     ProductsPage productsPage;
     CartPage cartPage;
     CheckoutPage checkoutPage;
+    String user = System.getProperty("user");
+    String password = System.getProperty("password");
 
 
     @Parameters({"browser"})

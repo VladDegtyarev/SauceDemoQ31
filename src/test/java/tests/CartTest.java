@@ -19,11 +19,17 @@ public class CartTest extends BaseTest {
     @Description("УПокупка товара")
     @Owner("Degtyarev Vlad")
     public void checkCart() {
-        loginPage.open();
+        loginPage.open()
+                        .login("standard_user", "secret_sauce")
+                                .addToCart("Sauce Labs Backpack")
+                                        .openShoppingCart();
+        assertEquals(cartPage.getProductNameFromCart(0),"Sauce Labs Backpack");
+
+        /*loginPage.open();
         loginPage.login("standard_user", "secret_sauce");
         productsPage.addToCart("Sauce Labs Backpack");
         productsPage.openShoppingCart();
-        assertEquals(cartPage.getProductNameFromCart(0),"Sauce Labs Backpack");
+        assertEquals(cartPage.getProductNameFromCart(0),"Sauce Labs Backpack");*/
     }
 
     @Test(testName = "Удаление товара из корзины",
@@ -32,12 +38,18 @@ public class CartTest extends BaseTest {
     @Description("Удаление товара из корзины и проверка его удаления")
     @Owner("Degtyarev Vlad")
     public void deleteProduct() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        loginPage.open();
+        loginPage.open()
+                .login("standard_user", "secret_sauce")
+                .addToCart("Sauce Labs Backpack")
+                .openShoppingCart()
+                .setRemoveElement()
+                .checkRemoveElement("Sauce Labs Backpack");
+
+        /*loginPage.open();
         loginPage.login("standard_user", "secret_sauce");
         productsPage.addToCart("Sauce Labs Backpack");
         productsPage.openShoppingCart();
         cartPage.setRemoveElement();
-        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[text()='Sauce Labs Backpack']")));
+        cartPage.checkRemoveElement("Sauce Labs Backpack");*/
     }
 }
