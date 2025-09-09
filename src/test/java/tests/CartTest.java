@@ -2,12 +2,7 @@ package tests;
 
 import io.qameta.allure.Description;
 import io.qameta.allure.Owner;
-import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
-
-import java.time.Duration;
 
 import static org.testng.Assert.assertEquals;
 
@@ -16,11 +11,11 @@ public class CartTest extends BaseTest {
     @Test(testName = "Покупа товара",
             description = "Покупка товара",
             priority = 1)
-    @Description("УПокупка товара")
+    @Description("Покупка товара")
     @Owner("Degtyarev Vlad")
     public void checkCart() {
         loginPage.open()
-                        .login("standard_user", "secret_sauce")
+                        .login(user, password)
                                 .addToCart("Sauce Labs Backpack")
                                         .openShoppingCart();
         assertEquals(cartPage.getProductNameFromCart(0),"Sauce Labs Backpack");
@@ -39,7 +34,7 @@ public class CartTest extends BaseTest {
     @Owner("Degtyarev Vlad")
     public void deleteProduct() {
         loginPage.open()
-                .login("standard_user", "secret_sauce")
+                .login(user, password)
                 .addToCart("Sauce Labs Backpack")
                 .openShoppingCart()
                 .setRemoveElement()
