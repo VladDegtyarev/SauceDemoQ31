@@ -15,7 +15,17 @@ public class CheckoutTest extends BaseTest {
     @Description("Авторизация в Your Information позитивными данными")
     @Owner("Degtyarev Vlad")
     public void checkCheckout() {
-        loginPage.open();
+        loginPage.open()
+                .login("standard_user", "secret_sauce")
+                .addToCart("Sauce Labs Backpack")
+                .openShoppingCart()
+                .buttonCheckout()
+                .YourInformation("test", "test", "511611");
+        WebElement element = driver.findElement(By.xpath("//*[@class='summary_total_label']"));
+        assertEquals(element.getText(), "Total: $32.39",
+                "Авторизация не выполнена");
+
+        /*loginPage.open();
         loginPage.login("standard_user", "secret_sauce");
         productsPage.addToCart("Sauce Labs Backpack");
         productsPage.openShoppingCart();
@@ -23,7 +33,7 @@ public class CheckoutTest extends BaseTest {
         checkoutPage.YourInformation("test", "test", "511611");
         WebElement element = driver.findElement(By.xpath("//*[@class='summary_total_label']"));
         assertEquals(element.getText(), "Total: $32.39",
-                "Авторизация не выполнена");
+                "Авторизация не выполнена");*/
     }
 
     @Test(testName = "Авторизация в Your Information с пустыи именем",
@@ -32,14 +42,23 @@ public class CheckoutTest extends BaseTest {
     @Description("Авторизация в Your Information с пустыи именем")
     @Owner("Degtyarev Vlad")
     public void checkCheckoutWithEmptyFirstName() {
-        loginPage.open();
+        loginPage.open()
+                .login("standard_user", "secret_sauce")
+                .addToCart("Sauce Labs Backpack")
+                .openShoppingCart()
+                .buttonCheckout()
+                .YourInformation("", "test", "511611");
+        assertEquals(checkoutPage.getErrorMessageCheckout(), "Error: First Name is required",
+                "Сообщение об ошибке не соответствует");
+
+        /*loginPage.open();
         loginPage.login("standard_user", "secret_sauce");
         productsPage.addToCart("Sauce Labs Backpack");
         productsPage.openShoppingCart();
         cartPage.buttonCheckout();
         checkoutPage.YourInformation("", "test", "511611");
         assertEquals(checkoutPage.getErrorMessageCheckout(), "Error: First Name is required",
-                "Сообщение об ошибке не соответствует");
+                "Сообщение об ошибке не соответствует");*/
     }
 
     @Test(testName = "Авторизация в Your Information с пустыи порлем",
@@ -48,14 +67,23 @@ public class CheckoutTest extends BaseTest {
     @Description("Авторизация в Your Information с пустыи порлем")
     @Owner("Degtyarev Vlad")
     public void checkCheckoutWithEmptyLastName() {
-        loginPage.open();
+        loginPage.open()
+                .login("standard_user", "secret_sauce")
+                .addToCart("Sauce Labs Backpack")
+                .openShoppingCart()
+                .buttonCheckout()
+                .YourInformation("test", "", "511611");
+        assertEquals(checkoutPage.getErrorMessageCheckout(), "Error: Last Name is required",
+                "Сообщение об ошибке не соответствует");
+
+        /*loginPage.open();
         loginPage.login("standard_user", "secret_sauce");
         productsPage.addToCart("Sauce Labs Backpack");
         productsPage.openShoppingCart();
         cartPage.buttonCheckout();
         checkoutPage.YourInformation("test", "", "511611");
         assertEquals(checkoutPage.getErrorMessageCheckout(), "Error: Last Name is required",
-                "Сообщение об ошибке не соответствует");
+                "Сообщение об ошибке не соответствует");*/
     }
 
     @Test(testName = "Авторизация в Your Information с пустыи почтовым индексом",
@@ -64,13 +92,22 @@ public class CheckoutTest extends BaseTest {
     @Description("Авторизация в Your Information с пустыи почтовым индексом")
     @Owner("Degtyarev Vlad")
     public void checkCheckoutWithEmptyZipCode() {
-        loginPage.open();
+        loginPage.open()
+                .login(user, password)
+                .addToCart("Sauce Labs Backpack")
+                .openShoppingCart()
+                .buttonCheckout()
+                .YourInformation("test", "test", "");
+        assertEquals(checkoutPage.getErrorMessageCheckout(), "Error: Postal Code is required",
+                "Сообщение об ошибке не соответствует");
+
+        /*loginPage.open();
         loginPage.login("standard_user", "secret_sauce");
         productsPage.addToCart("Sauce Labs Backpack");
         productsPage.openShoppingCart();
         cartPage.buttonCheckout();
         checkoutPage.YourInformation("test", "test", "");
         assertEquals(checkoutPage.getErrorMessageCheckout(), "Error: Postal Code is required",
-                "Сообщение об ошибке не соответствует");
+                "Сообщение об ошибке не соответствует");*/
     }
 }

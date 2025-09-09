@@ -17,7 +17,7 @@ public class ProductsTest extends BaseTest {
     @Owner("Degtyarev Vlad")
     public void checkDropDownPriceLow() {
         loginPage.open();
-        loginPage.login("standard_user", "secret_sauce");
+        loginPage.login(user, password);
         productsPage.openDropDown(2);
         WebElement item = driver.findElement(By.xpath("//*[@class='inventory_item'][1]" +
                 "/descendant::*[@class='inventory_item_price']"));
@@ -32,7 +32,7 @@ public class ProductsTest extends BaseTest {
     @Owner("Degtyarev Vlad")
     public void checkDropDownPriceHigh() {
         loginPage.open();
-        loginPage.login("standard_user", "secret_sauce");
+        loginPage.login(user, password);
         productsPage.openDropDown(3);
         WebElement item = driver.findElement(By.xpath("//*[@class='inventory_item'][1]" +
                 "/descendant::*[@class='inventory_item_price']"));

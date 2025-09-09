@@ -1,12 +1,14 @@
 package pages;
 
+import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.ArrayList;
 import java.util.List;
-
+@Log4j2
 public class CartPage extends BasePage{
     private final By REMOVE_ELEMENT= By.xpath("//*[text()='Remove']");
     private final By BUTTON_CHECKOUT= By.xpath("//*[@id='checkout']");
@@ -14,12 +16,16 @@ public class CartPage extends BasePage{
         super(driver);
     }
 
-    public void setRemoveElement(){
+    public CartPage setRemoveElement(){
+        log.info("Click Remove button");
         driver.findElement(REMOVE_ELEMENT).click();
+        return this;
     }
 
-    public void buttonCheckout(){
+    public CheckoutPage buttonCheckout(){
+        log.info("Click Checkout button");
         driver.findElement(BUTTON_CHECKOUT).click();
+        return new CheckoutPage(driver);
     }
 
     public boolean isProductInCart(String product){
@@ -38,6 +44,12 @@ public class CartPage extends BasePage{
             names.add(product.getText());
         }
         return names;
+    }
+
+    public CartPage checkRemoveElement(String product){
+        log.info("{} remove",product);
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(String.format("//*[text()='%s']",product))));
+        return this;
     }
 
 }
