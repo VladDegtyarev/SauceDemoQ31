@@ -23,7 +23,6 @@ public class CartPage extends BasePage{
     }
 
     public CheckoutPage buttonCheckout(){
-        log.info("Click Checkout button");
         driver.findElement(BUTTON_CHECKOUT).click();
         return new CheckoutPage(driver);
     }
